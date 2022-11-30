@@ -13,15 +13,17 @@ public class seminar2 {
                 System.out.println( str2);
                 String revstring = reverse(str1);
                 new StringBuilder(revstring).reverse().toString();
-                // System.out.println("The reverse of the given string is: " + revstring);
                 System.out.println( revstring.equals(str2));
+                System.out.println("+++++++++++++++++++++++++++++");
                 
                 // int x= foct(10);
                 // System.out.println(x);
                 StringBuilder sobr = new StringBuilder("Строчка");
-                System.out.println(isReversRecurs(sobr));
+                isReversRecurs(sobr);
+                System.out.println("\n"+"+++++++++++++++++++++++++++++");
+                
+                System.out.println("\n"+"+++++++++++++++++++++++++++++");
             }
-    
     
     // private static int foct(int i) {
     //     return 0;
@@ -43,34 +45,52 @@ public class seminar2 {
                 }                    
             }                
         }
-        int minLength = str3.length+1;
+        int min = str3.length+1;
         String result = null;
         for (int k=0; k<str3.length;k++) {
-            if (str3[k] != null && str3.length<minLength) {
-                minLength = str3.length;
+            if (str3[k] != null && str3.length<min) {
+                min = str3.length;
                 result = str3[k];
             }
         }
-        System.out.println(result);                           
+        System.out.println(result);
+        System.out.println("+++++++++++++++++++++++++++++");                           
     }
-    
-    
-    
-    
-    // *3Напишите программу, чтобы перевернуть строку с помощью рекурсии.
+// *3Напишите программу, чтобы перевернуть строку с помощью рекурсии.
     static StringBuilder isReversRecurs (StringBuilder sobr) {
-        System.out.print(sobr.charAt(sobr.length()-1));
-        if (sobr.length() == 1) {
+        if (sobr.length() == 0) {
             return sobr;
         }
+        System.out.print(sobr.charAt(sobr.length()-1));
         return isReversRecurs(sobr.deleteCharAt(sobr.length()-1));
     }
-}
+    
     // 4Дано два числа, например 3 и 56, необходимо составить следующие строки: 3 + 56 = 59 3 – 56 = -53 3 * 56 = 168 
     // Используем метод StringBuilder.append().
     
     
+    
     // 5Замените символ “=” на слово “равно”. Используйте методы StringBuilder.insert(),StringBuilder.deleteCharAt().
+    static String[] string(String[] arr){
+        String [] ravno = new String [arr.length];
+        StringBuilder text = new StringBuilder(arr[0]);
+        int sIndex = text.indexOf("o");
+        text.deleteCharAt(sIndex);
+        text.insert(sIndex,"f");
+        System.out.println(text.toString());
+        return ravno;
+        
+
+
+
+            // }
+        // System.out.println(text);
+        }
+
+        
+
+    
+}
     // *6Замените символ “=” на слово “равно”. Используйте методы StringBuilder.replace().
     // **7Сравнить время выполнения пунка 6 со строкой содержащей 10000 символов "=" средствами String и StringBuilder.
 
