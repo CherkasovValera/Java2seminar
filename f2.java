@@ -19,16 +19,16 @@ public class f2 {
                 }
             }
         }
-        int minLength = 100;
-        String result = null;
-        for (String each : arr3 ) {
-            if (each != null && each.length()<minLength) {
-                minLength = each.length();
-                result = each;
-            }
-        }
-        System.out.println(result);
-    }
+    //     int minLength = 100;
+    //     String result = null;
+    //     for (String each : arr3 ) {
+    //         if (each != null && each.length()<minLength) {
+    //             minLength = each.length();
+    //             result = each;
+    //         }
+    //     }
+    //     System.out.println(result);
+    // }
     
     
 }
