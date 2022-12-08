@@ -1,6 +1,9 @@
 import java.util.Arrays;
 
 public class seminar2 {
+    private static StringBuilder result;
+
+
     public static String reverse(String str) {
         return new StringBuilder(str).reverse().toString();
     }
@@ -21,7 +24,9 @@ public class seminar2 {
                 StringBuilder sobr = new StringBuilder("Строчка");
                 isReversRecurs(sobr);
                 System.out.println("\n"+"+++++++++++++++++++++++++++++");
-                
+                System.out.println(Arrays.toString(strokiLeng(3, 56)));
+                // stringin();
+                // strokiLeng(str); 
                 System.out.println("\n"+"+++++++++++++++++++++++++++++");
             }
     
@@ -67,25 +72,56 @@ public class seminar2 {
     
     // 4Дано два числа, например 3 и 56, необходимо составить следующие строки: 3 + 56 = 59 3 – 56 = -53 3 * 56 = 168 
     // Используем метод StringBuilder.append().
-    
+    static String[] strokiLeng (int x, int y){
+        String [] res = new String[3];
+        StringBuilder sum = new StringBuilder();
+        sum.append(x);
+        sum.append(" + ");
+        sum.append(y);
+        sum.append(" = ");
+        sum.append(x+y);
+        StringBuilder dif = new StringBuilder();
+        dif.append(x);
+        dif.append(" - ");
+        dif.append(y);
+        dif.append(" = ");
+        dif.append(x-y);
+        StringBuilder mult = new StringBuilder();
+        mult.append(x);
+        mult.append(" * ");
+        mult.append(y);
+        mult.append(" = ");
+        mult.append(x*y);
+        res[0]=sum.toString();
+        res[1]=dif.toString();
+        res[2]=mult.toString();
+        return res;
+
+    }
     
     
     // 5Замените символ “=” на слово “равно”. Используйте методы StringBuilder.insert(),StringBuilder.deleteCharAt().
-    static String[] string(String[] arr){
-        String [] ravno = new String [arr.length];
-        StringBuilder text = new StringBuilder(arr[0]);
-        int sIndex = text.indexOf("o");
+    static String[] stringin(String[] arr){
+        String [] res = new String[10];
+        StringBuilder result = new StringBuilder();
+        result.append("=");
+        result.append("=");
+        result.append("=");
+        System.out.println(result.toString());
+        for (int i=0;i<res.length; i++){
+        StringBuilder text = new StringBuilder(res[i]);
+        int sIndex = text.indexOf("=");
         text.deleteCharAt(sIndex);
-        text.insert(sIndex,"f");
+        text.insert(sIndex,"равно");
         System.out.println(text.toString());
-        return ravno;
-        
+        }
+        return res;
 
 
 
             // }
         // System.out.println(text);
-        }
+    }
 
         
 
