@@ -25,9 +25,20 @@ public class seminar2 {
                 isReversRecurs(sobr);
                 System.out.println("\n"+"+++++++++++++++++++++++++++++");
                 System.out.println(Arrays.toString(strokiLeng(3, 56)));
-                // stringin();
-                // strokiLeng(str); 
-                System.out.println("\n"+"+++++++++++++++++++++++++++++");
+                System.out.println("\n"+"+++++++++++++++++++++++++++++");                 
+// 5Замените символ “=” на слово “равно”. Используйте методы StringBuilder.insert(),StringBuilder.deleteCharAt().
+                String [] res = new String [3];
+                res[0]="=";
+                res[1]= "=";
+                res[2]= "=";
+                System.out.println(Arrays.toString(res));                
+                for (int i=0;i<res.length; i++){
+                StringBuilder text = new StringBuilder(res[i]);
+                int sIndex = text.indexOf("=");
+                text.deleteCharAt(sIndex);
+                text.insert(sIndex,"равно  ");
+                System.out.print(text.toString());
+                }
             }
     
     // private static int foct(int i) {
@@ -100,28 +111,31 @@ public class seminar2 {
     }
     
     
-    // 5Замените символ “=” на слово “равно”. Используйте методы StringBuilder.insert(),StringBuilder.deleteCharAt().
-    static String[] stringin(String[] arr){
-        String [] res = new String[10];
-        StringBuilder result = new StringBuilder();
-        result.append("=");
-        result.append("=");
-        result.append("=");
-        System.out.println(result.toString());
-        for (int i=0;i<res.length; i++){
-        StringBuilder text = new StringBuilder(res[i]);
-        int sIndex = text.indexOf("=");
-        text.deleteCharAt(sIndex);
-        text.insert(sIndex,"равно");
-        System.out.println(text.toString());
-        }
-        return res;
+    // static String[] stringin(String[] arr){
+    //     String [] res = new String [3];
+    //             res[0]="=";
+    //             res[1]= "=";
+    //             res[2]= "=";
+    //     String [] res = new String[10];
+    //     StringBuilder result = new StringBuilder();
+    //     result.append("=");
+    //     result.append("=");
+    //     result.append("=");
+    //     System.out.println(result.toString());
+        // for (int i=0;i<res.length; i++){
+        // StringBuilder text = new StringBuilder(res[i]);
+        // int sIndex = text.indexOf("=");
+        // text.deleteCharAt(sIndex);
+        // text.insert(sIndex,"равно");
+        // System.out.println(text.toString());
+        // }
+        // return res;
 
 
 
-            // }
-        // System.out.println(text);
-    }
+    //         // }
+    //     // System.out.println(text);
+    // }
 
         
 
